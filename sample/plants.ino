@@ -1,3 +1,4 @@
+#include <Plant.h>
 #include <math.h>
 #include <Servo.h>
 #include <DHT.h>
@@ -9,6 +10,7 @@
 int soilVal = 0;
 float soil, humidity, temperature;
 
+Plant plant;
 Servo myservo;  // create servo object to control a servo
 DHT dht(dhtPin, dhtType);
 
@@ -21,8 +23,8 @@ void setup() {
 void loop() {
   humidity = dht.readHumidity();
   temperature = dht.readTemperature();
-  soilVal = analogRead(soilPin);
-  soil = toPercentage(soilVal);
+  soilVal = plant.readMoisture(soilPin);
+  soil = plant.MoiToPercentage(soilVal);
 
   Serial.print("Temperature: ");
   Serial.print(temperature, 1);
@@ -41,20 +43,12 @@ void loop() {
   delay(5000);
 }
 
-
-// convert value to percentage
-float toPercentage(int value) {
-  float convert = (float) abs((value - 1018.18367) / (-381.633) * 100);
-  return convert;
-}
-
 int watering(float temperature, float humidity, float moisture) {
   if (moisture < 55) {
     moving();
   }
 }
 
-//servo
 void moving() {
   for (int pos = 0; pos <= 180; pos += 1) { // goes from 0 degrees to 180 degrees
     // in steps of 1 degree
