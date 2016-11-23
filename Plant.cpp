@@ -1,19 +1,19 @@
-#include "Arduino.h"
+﻿#include "Arduino.h"
 #include "Plant.h"
 
 // soil moisture sensor
-plant::plant(uint8_t moiPin)
+Plant::Plant(uint8_t moiPin)
 {
 	_moiPin = moiPin;
 }
 
-int plant::readMoisture()
+int Plant::readMoisture()
 {
 	return analogRead(_moiPin);
 }
 
 
-float plant::MoiToPercentage(int moiValue)
+float Plant::MoiToPercentage(int moiValue)
 {
 	float moiPer = (float)(moiValue - 1032.418367) / (-941.8367) * 100;
 	return moiPer;
@@ -21,23 +21,24 @@ float plant::MoiToPercentage(int moiValue)
 
 
 // temperature and humidity sensor
-dht::dht(uint8_t dhtPin)
+DHT::DHT(uint8_t dhtPin)
 {
 	_dhtPin = dhtPin;
 }
 
-void dht::init()
+void DHT::init()
 {
 	pinMode(_dhtPin, OUTPUT);
 }
 
-byte dht::read_data()
+byte DHT::read_data()
 {
 	byte data;
 	for (int i = 0; i < 8; i++)
 	{
 		if (digitalRead(_dhtPin) == LOW)
 		{
+
 			while (digitalRead(_dhtPin) == LOW);
 			delayMicroseconds(30);
 
@@ -50,7 +51,7 @@ byte dht::read_data()
 	return data;
 }
 
-void dht::set()
+void DHT::set()
 {
 	digitalWrite(_dhtPin, LOW);
 	delay(30);
@@ -69,34 +70,34 @@ void dht::set()
 	digitalWrite(_dhtPin, HIGH);
 }
 
-float dht::readHumidity()
+float DHT::readHumidity()
 {
 	return dat[0] + dat[1];
 }
 
-float dht::readTemperature()
+float DHT::readTemperature()
 {
 	return dat[2] + dat[3];
 }
 
 
 // mini fan sensor
-fan::fan(uint8_t fanPin)
+Fan::Fan(uint8_t fanPin)
 {
 	_fanPin = fanPin;
 }
 
-void fan::init()
+void Fan::init()
 {
 	pinMode(_fanPin, OUTPUT);
 }
 
-int fan::fanControl(int fanspeed)
+int Fan::fanControl(int fanspeed)
 {
 	analogWrite(_fanPin, fanspeed);
 }
 
-void fan::fanning(float temperature)
+void Fan::fanning(float temperature)
 {
 	if (temperature >= 30) {
 		fanControl(50);

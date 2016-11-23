@@ -3,10 +3,10 @@
 
 #include "Arduino.h"
 
-class plant // soil moisture sensor
+class Plant // soil moisture sensor
 {
 public:
-	plant(uint8_t dhtPin);
+	Plant(uint8_t dhtPin);
 	int readMoisture();
 	float MoiToPercentage(int moiValue);
   
@@ -14,10 +14,10 @@ private:
 	uint8_t _moiPin;
 };
 
-class dht // temperature and humidity sensor
+class DHT // temperature and humidity sensor
 {
 public:
-	dht(uint8_t dhtPin);
+	DHT(uint8_t dhtPin);
 	void init();
 	byte read_data();
 	void set();
@@ -29,10 +29,10 @@ private:
 	byte dat[5];
 };
 
-class fan // mini fan sensor
+class Fan // mini fan sensor
 {
 public:
-	fan(uint8_t fanPin);
+	Fan(uint8_t fanPin);
 	void init();
 	int fanControl(int fanspeed);
 	void fanning(float temperature);

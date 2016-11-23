@@ -5,9 +5,9 @@
 #######################################
 # Datatypes (KEYWORD1)
 #######################################
-plant	KEYWORD1
-dht	KEYWORD1
-fan	KEYWORD1
+Plant	KEYWORD1
+DHT	KEYWORD1
+Fan	KEYWORD1
 
 #######################################
 # Methods and Functions (KEYWORD2)
