@@ -1,0 +1,23 @@
+#######################################
+# Syntax Coloring For Plant
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+plant	KEYWORD1
+dht	KEYWORD1
+fan	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+readMoisture	KEYWORD2
+MoiToPercentage	KEYWORD2
+init	KEYWORD2
+read_data	KEYWORD2
+set	KEYWORD2
+readTemperature	KEYWORD2
+readHumidity	KEYWORD2
+fanControl	KEYWORD2
+fanning	KEYWORD2
