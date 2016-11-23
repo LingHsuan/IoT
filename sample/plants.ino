@@ -1,30 +1,32 @@
 #include <Plant.h>
-#include <math.h>
-#include <Servo.h>
-#include <DHT.h>
+#include <ChainableLED.h>
 
-#define soilPin A2 // soil moisture sensor
-#define dhtPin A3 // temperature and humidity sensor
-#define dhtType DHT11
+#define moiPin A2
+#define dhtPin 2
+#define fanPin 3
 
-int soilVal = 0;
-float soil, humidity, temperature;
+float humidity, temperature, moisture, moiValue;
 
-Plant plant;
-Servo myservo;  // create servo object to control a servo
-DHT dht(dhtPin, dhtType);
+plant plant(moiPin);
+dht dht(dhtPin);
+fan fan(fanPin);
+ChainableLED leds(7, 8, 1);
 
 void setup() {
-  myservo.attach(9);
-  dht.begin();
+  dht.init();
+  fan.init();
+  leds.init();
   Serial.begin(9600);
 }
 
 void loop() {
+  dht.set();
   humidity = dht.readHumidity();
   temperature = dht.readTemperature();
-  soilVal = plant.readMoisture(soilPin);
-  soil = plant.MoiToPercentage(soilVal);
+  moiValue = plant.readMoisture();
+  moisture = plant.MoiToPercentage(moiValue);
+  fan.fanning(temperature);
+  ledLight();
 
   Serial.print("Temperature: ");
   Serial.print(temperature, 1);
@@ -33,30 +35,22 @@ void loop() {
   Serial.print(humidity, 0);
   Serial.println("%");
   Serial.print("Moisture: ");
-  Serial.print(soil, 0);
-  Serial.print("%\t");
-  Serial.println(soilVal);
+  Serial.print(moiValue, 0);
+  Serial.print("\t");
+  Serial.print(moisture, 0);
+  Serial.println("%");
   Serial.println();
-
-  watering(temperature, humidity, soil);
 
   delay(5000);
 }
 
-int watering(float temperature, float humidity, float moisture) {
-  if (moisture < 55) {
-    moving();
-  }
-}
-
-void moving() {
-  for (int pos = 0; pos <= 180; pos += 1) { // goes from 0 degrees to 180 degrees
-    // in steps of 1 degree
-    myservo.write(pos);              // tell servo to go to position in variable 'pos'
-    delay(15);                       // waits 15ms for the servo to reach the position
-  }
-  for (int pos = 180; pos >= 0; pos -= 1) { // goes from 180 degrees to 0 degrees
-    myservo.write(pos);              // tell servo to go to position in variable 'pos'
-    delay(15);                       // waits 15ms for the servo to reach the position
+void ledLight()
+{
+  if (moisture <= 50) {
+    leds.setColorRGB(0, 255, 0, 0); //red
+  } else if (moisture > 50 && moisture < 60) {
+    leds.setColorRGB(0, 255, 255, 0); //yellow
+  } else {
+    leds.setColorRGB(0, 0, 255, 0); //green
   }
 }
