@@ -1,5 +1,4 @@
 #include <Plant.h>
-#include <ChainableLED.h>
 
 #define moiPin A2
 #define dhtPin 2
@@ -10,7 +9,7 @@ float humidity, temperature, moisture, moiValue;
 Plant plant(moiPin);
 DHT dht(dhtPin);
 Fan fan(fanPin);
-ChainableLED leds(7, 8, 1);
+LED leds(7, 8, 1);
 
 void setup() {
   dht.init();
@@ -26,7 +25,7 @@ void loop() {
   moiValue = plant.readMoisture();
   moisture = plant.MoiToPercentage(moiValue);
   fan.fanning(temperature);
-  ledLight();
+  leds.lighting(moisture);
 
   Serial.print("Temperature: ");
   Serial.print(temperature, 1);
@@ -42,15 +41,4 @@ void loop() {
   Serial.println();
 
   delay(5000);
-}
-
-void ledLight()
-{
-  if (moisture <= 50) {
-    leds.setColorRGB(0, 255, 0, 0); //red
-  } else if (moisture > 50 && moisture < 60) {
-    leds.setColorRGB(0, 255, 255, 0); //yellow
-  } else {
-    leds.setColorRGB(0, 0, 255, 0); //green
-  }
 }
