@@ -7,9 +7,9 @@
 
 float humidity, temperature, moisture, moiValue;
 
-plant plant(moiPin);
-dht dht(dhtPin);
-fan fan(fanPin);
+Plant plant(moiPin);
+DHT dht(dhtPin);
+Fan fan(fanPin);
 ChainableLED leds(7, 8, 1);
 
 void setup() {
