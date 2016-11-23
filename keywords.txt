@@ -8,6 +8,7 @@
 Plant	KEYWORD1
 DHT	KEYWORD1
 Fan	KEYWORD1
+LED	KEYWORD1
 
 #######################################
 # Methods and Functions (KEYWORD2)
@@ -21,3 +22,4 @@ readTemperature	KEYWORD2
 readHumidity	KEYWORD2
 fanControl	KEYWORD2
 fanning	KEYWORD2
+lighting	KEYWORD2

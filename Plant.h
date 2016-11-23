@@ -34,11 +34,35 @@ class Fan // mini fan sensor
 public:
 	Fan(uint8_t fanPin);
 	void init();
-	int fanControl(int fanspeed);
 	void fanning(float temperature);
 
 private:
 	uint8_t _fanPin;
+	int fanControl(int fanspeed);
+};
+
+#define _CL_RED             0
+#define _CL_GREEN           1
+#define _CL_BLUE            2
+#define _CLK_PULSE_DELAY    20
+
+class LED // RGB LED sensor
+{
+public:
+	LED(byte clk_pin, byte data_pin, byte number_of_leds);
+	void init();
+	void setColorRGB(byte led, byte red, byte green, byte blue);
+	void lighting(float moisture);
+
+private:
+	byte _clk_pin;
+	byte _data_pin;
+	byte _num_leds;
+	byte* _led_state;
+
+	void clk(void);
+	void sendByte(byte b);
+	void sendColor(byte red, byte green, byte blue);
 };
 
 #endif
