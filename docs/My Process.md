@@ -45,6 +45,23 @@ Coding、資料查詢與想出將Moisture Sensor數值轉成百分比的公式�
 ---
 
 ###11/21
-- __將目前的code試轉成Library__
+- __Plant Itself Coding__
+
+將DHT感測器的濕度與溫度讀取出來、風扇轉動。
+
+---
+
+###11/22
+- __Plant Itself Coding__
+- __將目前的code練習轉成Library__
+
+用DHT感測器的code作練習轉換。
+
+---
+
+###11/23
+- __將目前的code轉成Library__
+
+Code和Library已完成85%。
 
 ---
