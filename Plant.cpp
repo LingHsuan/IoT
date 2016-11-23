@@ -38,7 +38,6 @@ byte dht::read_data()
 	{
 		if (digitalRead(_dhtPin) == LOW)
 		{
-
 			while (digitalRead(_dhtPin) == LOW);
 			delayMicroseconds(30);
 
