@@ -15,33 +15,33 @@
 
 ## Examples
 ## Function Overview
-- `Plant(uint8_t dhtPin);`
+- `Plant(uint8_t dhtPin);`<br>
 Set up the soil and moisture sensor pin.
--	`int readMoisture();`
+-	`int readMoisture();`<br>
 Read the value of the soil moisture.
--	`float MoiToPercentage(int moiValue);`
+-	`float MoiToPercentage(int moiValue);`<br>
 Turn the value of soil moisture into percentage for human to read.
-- `DHT(uint8_t dhtPin);`
+- `DHT(uint8_t dhtPin);`<br>
 Set up the temperature and humidity sensor pin.
--	`byte read_data();`
+-	`byte read_data();`<br>
 Read the value of both temperature and humidity.
--	`void set();`
+-	`void set();`<br>
 Set two values into an array.
--	`float readTemperature();`
+-	`float readTemperature();`<br>
 Returns the value of temperature.
--	`float readHumidity();`
+-	`float readHumidity();`<br>
 Returns the value of humidity.
-- `Fan(uint8_t fanPin);`
+- `Fan(uint8_t fanPin);`<br>
 Set up the mini fan sensor pin.
--	`void fanning(float temperature);`
+-	`void fanning(float temperature);`<br>
 Start up the sensor while the temperature is too high.
-- `LED(byte clk_pin, byte data_pin, byte number_of_leds);`
+- `LED(byte clk_pin, byte data_pin, byte number_of_leds);`<br>
 Declare the RGB LED sensor pin and the amount of leds.
-- `void init();`
+- `void init();`<br>
 Set up the RGB LED sensor pin.
--	`void setColorRGB(byte led, byte red, byte green, byte blue);`
+-	`void setColorRGB(byte led, byte red, byte green, byte blue);`<br>
 Set the color to show into the RGB LED sensor.
--	`void lighting(float moisture);`
+-	`void lighting(float moisture);`<br>
 Shows the status of your plant with different colors.
 
 ## Minutiae
