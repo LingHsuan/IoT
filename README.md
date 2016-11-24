@@ -16,19 +16,32 @@
 ## Examples
 ## Function Overview
 - `Plant(uint8_t dhtPin);`
+Set up the soil and moisture sensor pin.
 -	`int readMoisture();`
+Read the value of the soil moisture.
 -	`float MoiToPercentage(int moiValue);`
+Turn the value of soil moisture into percentage for human to read.
 - `DHT(uint8_t dhtPin);`
--	`void init();`
+Set up the temperature and humidity sensor pin.
 -	`byte read_data();`
+Read the value of both temperature and humidity.
 -	`void set();`
+Set two values into an array.
 -	`float readTemperature();`
+Returns the value of temperature.
 -	`float readHumidity();`
+Returns the value of humidity.
 - `Fan(uint8_t fanPin);`
+Set up the mini fan sensor pin.
 -	`void fanning(float temperature);`
+Start up the sensor while the temperature is too high.
 - `LED(byte clk_pin, byte data_pin, byte number_of_leds);`
+Declare the RGB LED sensor pin and the amount of leds.
+- `void init();`
+Set up the RGB LED sensor pin.
 -	`void setColorRGB(byte led, byte red, byte green, byte blue);`
+Set the color to show into the RGB LED sensor.
 -	`void lighting(float moisture);`
+Shows the status of your plant with different colors.
 
 ## Minutiae
-## License
