@@ -5,11 +5,9 @@ Plant is an Arduino Library for getting datas from each sensors that you may wan
 
 ## Motivation
 Most of us have plants in our house and place them by the window sill or on the balcony.<br>
-Potted plants and flowers can improve your idea generation, mood, which make your brain work better.<br>
-You may also feel joy while watering the plants!<br>
+Potted plants and flowers can improve your idea generation, mood, which make your brain work better, you may also feel joy while watering the plants!<br>
 Want to get more interactive with those lovely flowers and plants?<br>
-All you need to do is to prepare some materials, combine with the sample code.<br>
-Then you'll get a "Plant Itself" to understand the plant's status, take a good care of it!<br>
+All you need to do is to prepare some materials, combine with the sample code, then you'll get a "Plant Itself" to understand the plant's status, take a good care of it!<br>
 
 ## Preparation
 - Plant
@@ -25,7 +23,8 @@ Then you'll get a "Plant Itself" to understand the plant's status, take a good c
 Download the archive and extract it to local directory, and then in the Arduino IDE go to "Sketch --> Import Library...", point the file dialogue to the file you just downloaded.
 
 ## Example
-
+A sample is provided with the library:<br>
+`plants.ino` tells the status of moisture within red, yellow and green colors.
 
 ## Function Overview
 - `Plant(uint8_t dhtPin);`<br>
