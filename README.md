@@ -1,15 +1,15 @@
 # Plant Itself
 
 ## Overview
-許多人會在辦公桌上放個小盆栽，或在家中窗戶和陽台種各式的植物。<br>看著盆栽長大十分療癒，替它澆水更是其中一種樂趣！<br>還想要多些互動嗎？<br>現在只要準備一些設備，結合已完成的Library使用，<br>自己DIY做出的 Plant Itself 幫您掌握植物的狀態，得到多一份呵護！
+Plant is an Arduino Library for getting datas from each sensors that you may want to know while planting flowers or plants.
 
 ## Motivation
-Most of us have plants in our house and place them by the window sill or on the balcony.
-Potted plants and flowers can improve your idea generation, mood, which make your brain work better.
-You may also feel joy while watering the plants!
-Want to get more interactive with those lovely flowers and plants?
-All you need to do is to prepare some materials, combine with the sample code.
-Then you'll get a "Plant Itself" to understand the plant's status, take a good care of it!
+Most of us have plants in our house and place them by the window sill or on the balcony.<br>
+Potted plants and flowers can improve your idea generation, mood, which make your brain work better.<br>
+You may also feel joy while watering the plants!<br>
+Want to get more interactive with those lovely flowers and plants?<br>
+All you need to do is to prepare some materials, combine with the sample code.<br>
+Then you'll get a "Plant Itself" to understand the plant's status, take a good care of it!<br>
 
 ## Preparation
 - Plant
@@ -19,9 +19,14 @@ Then you'll get a "Plant Itself" to understand the plant's status, take a good c
 - Temperature and Humidity Sensor
 - RGB Color Sensor
 - Mini Fan Sensor
-- Dupont line
+- Dupont Line
 
-## Examples
+## Installation
+Download the archive and extract it to local directory, and then in the Arduino IDE go to "Sketch --> Import Library...", point the file dialogue to the file you just downloaded.
+
+## Example
+
+
 ## Function Overview
 - `Plant(uint8_t dhtPin);`<br>
 Set up the soil and moisture sensor pin.<br><br>
