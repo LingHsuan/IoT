@@ -24,12 +24,9 @@ float Plant::MoiToPercentage(int moiValue)
 DHT::DHT(uint8_t dhtPin)
 {
 	_dhtPin = dhtPin;
-}
-
-void DHT::init()
-{
 	pinMode(_dhtPin, OUTPUT);
 }
+
 
 byte DHT::read_data()
 {
@@ -85,10 +82,6 @@ float DHT::readTemperature()
 Fan::Fan(uint8_t fanPin)
 {
 	_fanPin = fanPin;
-}
-
-void Fan::init()
-{
 	pinMode(_fanPin, OUTPUT);
 }
 

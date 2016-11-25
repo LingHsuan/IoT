@@ -18,7 +18,6 @@ class DHT // temperature and humidity sensor
 {
 public:
 	DHT(uint8_t dhtPin);
-	void init();
 	byte read_data();
 	void set();
 	float readTemperature();
@@ -33,7 +32,6 @@ class Fan // mini fan sensor
 {
 public:
 	Fan(uint8_t fanPin);
-	void init();
 	void fanning(float temperature);
 
 private:
