@@ -12,8 +12,6 @@ Fan fan(fanPin);
 LED leds(7, 8, 1);
 
 void setup() {
-  dht.init();
-  fan.init();
   leds.init();
   Serial.begin(9600);
 }
