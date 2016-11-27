@@ -4,7 +4,8 @@
 #define dhtPin 2
 #define fanPin 3
 
-float humidity, temperature, moisture, moiValue;
+float humidity, temperature, moisture;
+int moiValue;
 
 Plant plant(moiPin);
 DHT dht(dhtPin);
@@ -32,7 +33,7 @@ void loop() {
   Serial.print(humidity, 0);
   Serial.println("%");
   Serial.print("Moisture: ");
-  Serial.print(moiValue, 0);
+  Serial.print(moiValue);
   Serial.print("\t");
   Serial.print(moisture, 0);
   Serial.println("%");
