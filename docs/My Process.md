@@ -67,15 +67,14 @@ Coding、資料查詢與想出將Moisture Sensor數值轉成百分比的公式�
 
 ###11/24
 - __README撰寫__
+- __畫佈線圖__
 
 ---
 
-###11/25
+###11/27
+- __Plant Itself Coding__
 - __README撰寫__
 
----
-
-###11/26
-- __README撰寫__
+Coding上做些小修改。
 
 ---
