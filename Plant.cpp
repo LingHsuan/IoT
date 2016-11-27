@@ -9,7 +9,13 @@ Plant::Plant(uint8_t moiPin)
 
 int Plant::readMoisture()
 {
-	return analogRead(_moiPin);
+	int moistureSum = 0;
+	for (int i = 0; i < 30; i++)
+	{
+		moistureSum = moistureSum + analogRead(_moiPin);
+		delay(100);
+	}
+	return (moistureSum / 30);
 }
 
 
