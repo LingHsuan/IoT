@@ -5,7 +5,7 @@ Plant is an Arduino Library for getting datas from each sensors that you may wan
 
 ## Motivation
 Most of us have plants in our house and place them by the window sill or on the balcony.<br>
-Potted plants and flowers can improve your idea generation, mood, which make your brain work better, you may also feel joy while watering the plants!<br>
+Potted plants and flowers can improve your idea generation, mood, which make your brain work better, you may also feel joy while watering the plants!<br><br>
 Want to get more interactive with those lovely flowers and plants?<br>
 All you need to do is to prepare some materials, combine with the sample code, then you'll get a "Plant Itself" to understand the plant's status, take a good care of it!<br>
 
@@ -24,13 +24,13 @@ Download the archive and extract it to local directory, and then in the Arduino 
 
 ## Example
 A sample is provided with the library:<br>
-`plants.ino` tells the status of moisture within red, yellow and green colors.
+- `plants.ino` tells the status of moisture within red, yellow and green colors.
 
 ## Function Overview
 - `Plant(uint8_t dhtPin);`<br>
 Set up the soil and moisture sensor pin.<br><br>
 -	`int readMoisture();`<br>
-Read the value of the soil moisture.<br><br>
+Read the exact value of soil moisture.<br><br>
 -	`float MoiToPercentage(int moiValue);`<br>
 Turn the value of soil moisture into percentage for human to read.<br><br>
 - `DHT(uint8_t dhtPin);`<br>
