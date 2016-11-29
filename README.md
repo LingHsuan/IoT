@@ -22,6 +22,7 @@ All you need to do is to prepare some materials, combine with the sample code, t
 - Motor Drive Module
 - Water Pump
 - Dupont Line
+<br>
 ![](https://github.com/LingHsuan/IoT/blob/master/docs/detail_sheet.jpg)
 
 ## Installation
@@ -62,3 +63,6 @@ Shows the status of your plant with different colors.<br><br>
 Set up the water pump pin.<br><br>
 -	`void watering(float moisture, int temperature, int wateringTime);`<br>
 Start up the sensor while the plant is too dry.<br><br>
+
+## Expansion
+Plant Itself is for all large and small potted plants. If there are more sensors, motor and pipeline, which can control not only a potted plant, and even allows a whole garden automation. It is not olny limited to watering, but also for agricultural pesticide spraying, automatic lighting, etc. Users can flexibly adapt to their needs.
