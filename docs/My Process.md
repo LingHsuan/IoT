@@ -78,3 +78,15 @@ Coding、資料查詢與想出將Moisture Sensor數值轉成百分比的公式�
 Coding上做些小修改。
 
 ---
+
+###11/28
+- __Plant Itself Coding__
+- __畫關係圖__
+
+---
+
+###11/29
+- __README撰寫__
+- __文件整理__
+
+---
