@@ -25,9 +25,12 @@ All you need to do is to prepare some materials, combine with the sample code, t
 ## Installation
 Download the archive and extract it to local directory, and then in the Arduino IDE go to "Sketch --> Import Library...", point the file dialogue to the file you just downloaded.
 
-## Example
-A sample is provided with the library:<br>
-- `plants.ino` tells the status of moisture within red, yellow and green colors.
+## Examples
+Examples are provided with the library:<br>
+- `moistureStatus.ino` tells the status of moisture within red, yellow and green colors.
+- `watering.ino` waters the plant when the soil is dry.
+- `fanning.ino` turns the fan on to cool the plant.
+- `plants.ino` does all things above, tells the status, waters and turns on the fan while needed.
 
 ## Function Overview
 - `Plant(uint8_t dhtPin);`<br>
