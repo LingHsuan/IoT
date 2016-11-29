@@ -9,15 +9,16 @@ Plant	KEYWORD1
 DHT	KEYWORD1
 Fan	KEYWORD1
 LED	KEYWORD1
+Pump	KEYWORD1
 
 #######################################
 # Methods and Functions (KEYWORD2)
 #######################################
 readMoisture	KEYWORD2
-MoiToPercentage	KEYWORD2
-init	KEYWORD2
-set	KEYWORD2
+init		KEYWORD2
+set		KEYWORD2
 readTemperature	KEYWORD2
 readHumidity	KEYWORD2
-fanning	KEYWORD2
+fanning		KEYWORD2
 lighting	KEYWORD2
+watering	KEYWORD2

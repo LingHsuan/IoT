@@ -1,32 +1,27 @@
 ﻿#include "Arduino.h"
 #include "Plant.h"
 
-// soil moisture sensor
+// Soil moisture sensor
 Plant::Plant(uint8_t moiPin)
 {
 	_moiPin = moiPin;
 }
 
-int Plant::readMoisture()
+float Plant::readMoisture()
 {
 	int moistureSum = 0;
+	// Read 30 times and get the average
 	for (int i = 0; i < 30; i++)
 	{
 		moistureSum = moistureSum + analogRead(_moiPin);
 		delay(100);
 	}
-	return (moistureSum / 30);
+	int moistureAvg = (moistureSum / 30);
+	float moiPercentage = (float)(moistureAvg - 1032.418367) / (-941.8367) * 100; // Convert the value to percentage
+	return moiPercentage;
 }
 
-
-float Plant::MoiToPercentage(int moiValue)
-{
-	float moiPer = (float)(moiValue - 1032.418367) / (-941.8367) * 100;
-	return moiPer;
-}
-
-
-// temperature and humidity sensor
+// Temperature and humidity sensor
 DHT::DHT(uint8_t dhtPin)
 {
 	_dhtPin = dhtPin;
@@ -41,7 +36,6 @@ byte DHT::read_data()
 	{
 		if (digitalRead(_dhtPin) == LOW)
 		{
-
 			while (digitalRead(_dhtPin) == LOW);
 			delayMicroseconds(30);
 
@@ -84,7 +78,7 @@ float DHT::readTemperature()
 }
 
 
-// mini fan sensor
+// Mini fan sensor
 Fan::Fan(uint8_t fanPin)
 {
 	_fanPin = fanPin;
@@ -205,6 +199,31 @@ void LED::lighting(float moisture)
 	}
 	else {
 		setColorRGB(0, 0, 255, 0); //green
+	}
+}
+
+//Water pump
+Pump::Pump(uint8_t pumpAnodePin, uint8_t pumpCathodePin)
+{
+	_pumpAnodePin = pumpAnodePin;
+	pinMode(_pumpAnodePin, OUTPUT);
+	_pumpCathodePin = pumpCathodePin;
+	pinMode(_pumpCathodePin, OUTPUT);
+}
+
+void Pump::pumping(int wateringTime)
+{
+	digitalWrite(_pumpAnodePin, HIGH);
+	delay(wateringTime);
+	digitalWrite(_pumpAnodePin, LOW);
+}
+
+void Pump::watering(float moisture, int temperature, int wateringTime)
+{
+	if (moisture < 50){
+		if (temperature < 30){
+			pumping(wateringTime);
+		}
 	}
 }
 // END OF FILE

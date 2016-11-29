@@ -7,8 +7,7 @@ class Plant // soil moisture sensor
 {
 public:
 	Plant(uint8_t dhtPin);
-	int readMoisture();
-	float MoiToPercentage(int moiValue);
+	float readMoisture();
   
 private:
 	uint8_t _moiPin;
@@ -61,6 +60,19 @@ private:
 	void clk(void);
 	void sendByte(byte b);
 	void sendColor(byte red, byte green, byte blue);
+};
+
+class Pump //water pump
+{
+public:
+	Pump(uint8_t pumpAnodePin, uint8_t pumpCathodePin);
+	void watering(float moisture, int temperature, int wateringTime);
+
+private:
+	uint8_t _pumpAnodePin;
+	uint8_t _pumpCathodePin;
+
+	void pumping(int wateringTime);
 };
 
 #endif
