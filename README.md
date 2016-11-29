@@ -1,13 +1,15 @@
 # Plant Itself
 
 ## Overview
-Plant is an Arduino Library for getting datas from each sensors that you may want to know while planting flowers or plants.
+Plant Itself is an Arduino Library for getting datas from each sensors that you may want to know while planting flowers or plants, it is also an automatic system helping you plant good care!.
 
 ## Motivation
 Most of us have plants in our house and place them by the window sill or on the balcony.<br>
 Potted plants and flowers can improve your idea generation, mood, which make your brain work better, you may also feel joy while watering the plants!<br><br>
-Want to get more interactive with those lovely flowers and plants?<br>
-All you need to do is to prepare some materials, combine with the sample code, then you'll get a "Plant Itself" to understand the plant's status, take a good care of it!<br>
+Do you want to plant flowers, but fear no time or forget to water?<br>
+Do you want to get more interactive with those lovely flowers and plants?<br>
+How can these plants survive if you're on a business trip or going abroad?<br>
+All you need to do is to prepare some materials, combine with the sample code, then you'll get a "Plant Itself" which may really plant by itself!<br>
 
 ## Preparation
 - Plant
@@ -17,7 +19,10 @@ All you need to do is to prepare some materials, combine with the sample code, t
 - Temperature and Humidity Sensor
 - RGB Color Sensor
 - Mini Fan Sensor
+- Motor Drive Module
+- Water Pump
 - Dupont Line
+![](https://github.com/LingHsuan/IoT/blob/master/docs/detail_sheet.jpg)
 
 ## Installation
 Download the archive and extract it to local directory, and then in the Arduino IDE go to "Sketch --> Import Library...", point the file dialogue to the file you just downloaded.
@@ -31,8 +36,6 @@ A sample is provided with the library:<br>
 Set up the soil and moisture sensor pin.<br><br>
 -	`int readMoisture();`<br>
 Read the exact value of soil moisture.<br><br>
--	`float MoiToPercentage(int moiValue);`<br>
-Turn the value of soil moisture into percentage for human to read.<br><br>
 - `DHT(uint8_t dhtPin);`<br>
 Set up the temperature and humidity sensor pin.<br><br>
 -	`byte read_data();`<br>
@@ -55,3 +58,7 @@ Set up the RGB LED sensor pin.<br><br>
 Set the color to show into the RGB LED sensor.<br><br>
 -	`void lighting(float moisture);`<br>
 Shows the status of your plant with different colors.<br><br>
+-	`Pump(uint8_t pumpAnodePin, uint8_t pumpCathodePin);`<br>
+Set up the water pump pin.<br><br>
+-	`void watering(float moisture, int temperature, int wateringTime);`<br>
+Start up the sensor while the plant is too dry.<br><br>
