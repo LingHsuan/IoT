@@ -6,7 +6,7 @@ Plant Itself is an Arduino Library for getting datas from each sensors that you 
 ## Motivation
 Most of us have plants in our house and place them by the window sill or on the balcony.<br>
 Potted plants and flowers can improve your idea generation, mood, which make your brain work better, you may also feel joy while watering the plants!<br><br>
-Do you want to plant flowers, but fear no time or forget to water?Do you want to get more interactive with those lovely flowers and plants?How can these plants survive if you're on a business trip or going abroad?<br>
+Do you want to plant flowers, but fear no time or forget to water? Do you want to get more interactive with those lovely flowers and plants? How can these plants survive if you're on a business trip or going abroad?<br>
 All you need to do is to prepare some materials, combine with the sample code, then you'll get a "Plant Itself" which may really plant by itself!<br>
 
 ## Preparation
