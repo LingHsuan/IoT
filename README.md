@@ -65,7 +65,7 @@ Set up the water pump pin.<br><br>
 Start up the sensor while the plant is too dry.<br><br>
 
 ## Demo
-Plant Ifself Demo
+[![]Plant Ifself Demo](https://www.youtube.com/watch?v=XilohPDyfyM)<br>
 [![](http://img.youtube.com/vi/XilohPDyfyM/0.jpg)](https://www.youtube.com/watch?v=XilohPDyfyM)
 
 ## Expansion
