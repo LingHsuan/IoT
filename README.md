@@ -64,5 +64,9 @@ Set up the water pump pin.<br><br>
 -	`void watering(float moisture, int temperature, int wateringTime);`<br>
 Start up the sensor while the plant is too dry.<br><br>
 
+## Demo
+Plant Ifself Demo
+[![](http://img.youtube.com/vi/XilohPDyfyM/0.jpg)](https://www.youtube.com/watch?v=XilohPDyfyM)
+
 ## Expansion
 Plant Itself is for all large and small potted plants. If there are more sensors, motor and pipeline, which can control not only a potted plant, and even allows a whole garden automation. It is not olny limited to watering, but also for agricultural pesticide spraying, automatic lighting, etc. Users can flexibly adapt to their needs.
