@@ -65,8 +65,8 @@ Set up the water pump pin.<br><br>
 Start up the sensor while the plant is too dry.<br><br>
 
 ## Demo
-[Plant Ifself Demo](https://www.youtube.com/watch?v=XilohPDyfyM)<br>
-[![](http://img.youtube.com/vi/XilohPDyfyM/0.jpg)](https://www.youtube.com/watch?v=XilohPDyfyM)
+[Plant Ifself Demo](https://www.youtube.com/watch?v=DAYqLAj_xa0)<br>
+[![](http://img.youtube.com/vi/DAYqLAj_xa0/0.jpg)](https://www.youtube.com/watch?v=DAYqLAj_xa0)
 
 ## Expansion
 Plant Itself is for all large and small potted plants. If there are more sensors, motor and pipeline, which can control not only a potted plant, and even allows a whole garden automation. It is not olny limited to watering, but also for agricultural pesticide spraying, automatic lighting, etc. Users can flexibly adapt to their needs.
