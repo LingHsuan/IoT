@@ -14,7 +14,7 @@ All you need to do is to prepare some materials, combine with the sample code, t
 - Breadboard
 - Soil Moisture Sensor
 - Temperature and Humidity Sensor
-- RGB Color Sensor
+- RGB LED
 - Mini Fan Sensor
 - Motor Drive Module
 - Water Pump
